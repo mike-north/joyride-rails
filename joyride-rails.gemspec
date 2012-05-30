@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Easy jQuery feature tours"
   s.description = "Easy jQuery feature tours, based on ZURB's Joyride plugin (http://www.zurb.com/playground/jquery_joyride_feature_tour_plugin)"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.2"
