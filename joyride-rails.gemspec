@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Joyride::VERSION
   s.authors     = ["Michael North"]
   s.email       = ["michael.north@truenorthapps.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/TrueNorth/joyride-rails"
   s.summary     = "Easy jQuery feature tours"
   s.description = "Easy jQuery feature tours, based on ZURB's Joyride plugin (http://www.zurb.com/playground/jquery_joyride_feature_tour_plugin)"
 
