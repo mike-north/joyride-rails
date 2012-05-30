@@ -5,11 +5,12 @@ Build easy feature tours, thanks to [ZURB's joyride plugin](http://www.zurb.com/
 
 Setup
 ------
-- You must include the proper script and style assets
-    - Javascript
-    <br><code>//= require joyride/joyride</code>
-    - CSS
-    <br><code>*= require joyride/joyride</code>
+You must include the proper script and style assets
+
+        //= require joyride/joyride
+and    
+        
+        *= require joyride/joyride
 
 Basic Usage
 ------------
