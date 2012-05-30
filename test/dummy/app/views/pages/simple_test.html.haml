@@ -1,0 +1,21 @@
+%h1 Pages#simple_test
+%p Find me in app/views/pages/simple_test.html.haml
+
+
+%div{:style => "width: 300px; float:right; margin: 5px; padding: 5px; background: #eee; border: 1px solid #ccc"}
+  %h1#section1
+    This is a title
+  %p
+    This is a test of the emergency broadcast system
+
+%ol#chooseID
+  %li{'data-id' => "section1"}
+    Tip content...
+
+:javascript
+  $(window).load(function() {
+    $(this).joyride({
+      'tipContent': '#chooseID'
+      /* Options will go here */
+    });
+  });
