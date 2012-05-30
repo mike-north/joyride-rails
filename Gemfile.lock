@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    joyride-rails (0.0.1)
+    joyride-rails (0.0.2)
       haml (~> 3.1.4)
       jquery-rails
       rails (~> 3.2.2)
