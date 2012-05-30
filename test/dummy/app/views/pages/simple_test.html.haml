@@ -1,22 +1,10 @@
-%h1 Pages#simple_test
-%p Find me in app/views/pages/simple_test.html.haml
-
-
-%div{:style => "width: 300px; float:right; margin: 5px; padding: 5px; background: #eee; border: 1px solid #ccc"}
-  %h1#section1
-    This is a title
-  %p
-    This is a test of the emergency broadcast system
-
-
-%div{:style => "width: 300px; float:left; margin: 5px; padding: 5px; background: #eee; border: 1px solid #ccc"}
-  %h1#section2
-    This is another title
-  %p
-    This is a test of the emergency broadcast system. This is only a test
+= render :file => "pages/content_to_tour_1"
 
 = joyride :chooseID, :cookie => false do |j|
-  = j.step :section1, "This is the first step"
+  = j.step :section1, "This is the first step", :html => {:class => ""}
   = j.step :section2, "This is the second step"
+  = j.step :word1, "This is the a random word"
+  = j.step :word2, "Another random word"
+  = j.step :word3, "One last random word"
 
 

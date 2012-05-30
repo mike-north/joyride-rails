@@ -6,6 +6,7 @@
  * http://www.opensource.org/licenses/mit-license.php
 */
 
+
 (function($) {
   $.fn.joyride = function(options) {
 
@@ -29,6 +30,9 @@
       'postRideCallback': $.noop, // A method to call once the tour closes (canceled or complete)
       'postStepCallback': $.noop // A method to call after each step
     };
+
+
+
 
     var options = $.extend(settings, options);
 
@@ -118,8 +122,14 @@
         currentTipPosition = parentElement.offset(),
         currentParentHeight = parentElement.outerHeight(),
         currentTipHeight = currentTip.outerHeight(),
-        nubHeight = Math.ceil($('.joyride-nub').outerHeight() / 2),
-        tipOffset = 0;
+        nubHeight = Math.ceil($('.joyride-nub').outerHeight() / 4),
+        currentTipWidth = Math.ceil($('.joyride-tip-guide').outerWidth()),
+        nubOffset = currentTip.find('.joyride-nub').css('left');
+
+        if(currentTipPosition != null && currentTipPosition.left+currentTipWidth*1.2 > $(window).innerWidth()) {
+            currentTip.addClass('right');
+        }
+
 
         if (currentTip.length === 0) return;
 
@@ -152,8 +162,10 @@
           // ++++++++++++++++++
 
           if (settings.tipLocation == "bottom") {
-            currentTip.offset({top: (currentTipPosition.top + currentParentHeight + nubHeight),
-              left: (currentTipPosition.left - bodyOffset.left)});
+            currentTip.offset({
+                top: (currentTipPosition.top + currentParentHeight + nubHeight),
+                left: currentTip.hasClass('right') ? (currentTipPosition.left - bodyOffset.left-currentTipWidth + 3*parseInt(nubOffset)) : (currentTipPosition.left - bodyOffset.left)
+            });
             currentTip.children('.joyride-nub').addClass('top').removeClass('bottom');
           } else if (settings.tipLocation == "top") {
             if (currentTipHeight >= currentTipPosition.top) {

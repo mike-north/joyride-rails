@@ -1,0 +1,16 @@
+= render :file => "pages/content_to_tour_1"
+%ul#step_log{:style => "background: #000; color: #fff; padding: 5px; margin: 5px; border-radius: 5px"}
+= joyride :chooseID,
+          :cookie => false,
+          :animation => :fade,
+          :post_step_callback => "$(\"#step_log\").append('<li>Step rendered</li>');",
+          :post_tour_callback => "alert('done');",
+          :tip_class => "bootstrap_tour" do |j|
+  = j.step :section1, "This is the first step"
+  = j.step :section2, "This is the second step"
+  = j.step :word1, "This is the a random word"
+  = j.step :word2, "Another random word"
+  = j.step :word3, "One last random word"
+
+
+

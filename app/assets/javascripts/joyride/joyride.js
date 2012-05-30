@@ -15,17 +15,18 @@
 //= require ./jquery.joyride-1.0.3
 //= require_self
 
-$().ready(function(){
-    $("._joyride_tour").each(function(idx,item){
+$().ready(function () {
+    $("._joyride_tour").each(function (idx, item) {
         this_id = $(item).attr('id');
         console.log(this_id);
         $(window).joyride({
-            'tipContent': "#"+this_id,
-            'cookieMonster': $(item).attr('data-cookie-enabled') == "true"
+            'tipContent':"#" + this_id,
+            'cookieMonster': $(item).attr('data-cookie-enabled') == "true",
+            'tipAnimation': $(item).attr('data-animation'),
+            'postRideCallback': function() { eval($(item).attr('data-post-tour-callback')) },
+            'postStepCallback':  function(){ eval($(item).attr('data-post-step-callback')) }
         });
     });
 
-
 });
-
 

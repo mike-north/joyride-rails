@@ -1,0 +1,48 @@
+:css
+  .container {
+    height: auto;
+    overflow: scroll;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .container .column {
+      text-align: left;
+      background: #ccc;
+      border-radius: 3px;
+      margin: 5px;
+      width: 30%;
+      float: left;
+      padding: 5px;
+  }
+
+
+
+%div{:style => "width: 300px; float:right; margin: 5px; padding: 5px; background: #ddd; border: 1px solid #ccc"}
+  %h1#section1
+    This is a title
+  %p
+    This is a test of the emergency broadcast system
+
+
+%div{:style => "width: 300px; margin: 5px; padding: 5px; background: #ddd; border: 1px solid #ccc"}
+  %h1#section2
+    This is another title
+  %p
+    This is a test of the emergency broadcast system. This is only a test
+
+.container
+  .column
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    %small#word1
+      Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  .column
+    Lorem ipsum dolor sit amet, consectetur
+    %i#word2
+      adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  .column
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+    %b#word3
+      incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

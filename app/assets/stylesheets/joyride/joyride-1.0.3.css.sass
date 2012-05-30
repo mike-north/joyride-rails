@@ -4,6 +4,9 @@
 body
   position: relative
 
+#joyRideTipContent
+  display: none
+
 .joyride-tip-guide
   position: absolute
   background: $joyride_tip_background
@@ -37,6 +40,10 @@ body
       border-top-color: $joyride_tip_background !important
       bottom: $joyride_tip_nub_height*-2
       bottom: none
+  &.right
+    left: -1*$joyride_tip_width
+    span.joyride-nub
+      left: $joyride_tip_width - $joyride_tip_nub_offset_left
   h1, h2, h3, h4, h5, h6
     line-height: 1.25
     margin: 0
