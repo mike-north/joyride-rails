@@ -16,29 +16,50 @@ body
   z-index: 10
   font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", Helvetica, Arial, Lucida, sans-serif
   font-weight: normal
-  -moz-border-radius: $joyride_tip_border_radius
-  -webkit-border-radius: $joyride_tip_border_radius
-  border-radius: $joyride_tip_border_radius
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  border-radius: 4px
+
+.joyride-content-wrapper
+  padding: 10px 10px 10px 15px
+
+/* Mobile */
+
+@media only screen and (max-width: 769px)
+  .joyride-tip-guide
+    width: 100%
+    -moz-border-radius: 0
+    -webkit-border-radius: 0
+    border-radius: 0
+  .joyride-tip-guide-wrapper
+    width: 100%
+
+/* Add a little css triangle pip, older browser just miss out on the fanciness of it */
+
+.joyride-tip-guide
   span.joyride-nub
     display: block
     position: absolute
     left: $joyride_tip_nub_offset_left
     width: 0
     height: 0
-    border: solid $joyride_tip_nub_height
+    border: solid 14px
+    border: solid 14px
     &.top
       border-top-color: transparent !important
       border-left-color: transparent !important
       border-right-color: transparent !important
-      border-bottom-color: $joyride_tip_background
-      top: $joyride_tip_nub_height*-2
+      border-bottom-color: #000
+      border-bottom-color: rgba(0, 0, 0, 0.8)
+      top: -28px
       bottom: none
     &.bottom
       border-bottom-color: transparent !important
       border-left-color: transparent !important
       border-right-color: transparent !important
-      border-top-color: $joyride_tip_background !important
-      bottom: $joyride_tip_nub_height*-2
+      border-top-color: #000
+      border-top-color: rgba(0, 0, 0, 0.8) !important
+      bottom: -28px
       bottom: none
   &.right
     left: -1*$joyride_tip_width
@@ -63,7 +84,7 @@ body
     font-size: 14px
   p
     margin: 0 0 18px 0
-    font-size: $joyride_tip_text_size
+    font-size: 14px
     line-height: 18px
   a
     color: rgb(255, 255, 255)
@@ -82,7 +103,7 @@ body
     color: rgb(255, 255, 255)
     float: left
     margin: 0 6px 8px 0px
-    border: solid 1px darken(desaturate($joyride_tip_button_color,50%),15%)
+    border: solid 1px rgb(0, 60, 180)
     background: $joyride_tip_button_color
     background: -moz-linear-gradient(top, $joyride_tip_button_color 0%, $joyride_tip_button_color_2 100%)
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $joyride_tip_button_color), color-stop(100%, $joyride_tip_button_color_2))
@@ -99,9 +120,10 @@ body
     -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3) inset
     box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3) inset
 
+
 .joyride-next-tip:hover
   color: rgb(255, 255, 255) !important
-  border: solid 1px darken(desaturate($joyride_tip_button_color,50%),15%) !important
+  border: solid 1px rgb(0, 60, 180) !important
   background: $joyride_tip_button_hover_color
   background: -moz-linear-gradient(top, $joyride_tip_button_hover_color 0%, $joyride_tip_button_hover_color_2 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $joyride_tip_button_hover_color), color-stop(100%, $joyride_tip_button_hover_color_2))
@@ -129,7 +151,7 @@ body
   position: absolute
   right: 10px
   top: 10px
-  color: rgba(255, 255, 255, 0.6) !important
+  color: rgba(255, 255, 255, 0.4) !important
   text-decoration: none
   font-family: Verdana, sans-serif
   font-size: 10px
@@ -137,3 +159,4 @@ body
   border-bottom: none !important
   &:hover
     color: rgba(255, 255, 255, 0.9) !important
+
