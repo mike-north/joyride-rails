@@ -118,13 +118,8 @@
         currentTipPosition = parentElement.offset(),
         currentParentHeight = parentElement.outerHeight(),
         currentTipHeight = currentTip.outerHeight(),
-        nubHeight = Math.ceil($('.joyride-nub').outerHeight() / 4),
-        currentTipWidth = Math.ceil($('.joyride-tip-guide').outerWidth()),
-        nubOffset = currentTip.find('.joyride-nub').css('left');
-
-        if(currentTipPosition != null && currentTipPosition.left+currentTipWidth*1.2 > $(window).innerWidth()) {
-            currentTip.addClass('right');
-        }
+        nubHeight = Math.ceil($('.joyride-nub').outerHeight() / 2),
+        tipOffset = 0;
 
         if (currentTip.length === 0) return;
 

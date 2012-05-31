@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./modernizr.foundation
 //= require ./jquery.joyride-1.0.4
 //= require_self
 
