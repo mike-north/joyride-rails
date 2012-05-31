@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ./jquery.joyride-1.0.3
+//= require ./jquery.joyride-1.0.4
 //= require_self
 
 $().ready(function () {
