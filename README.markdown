@@ -3,6 +3,8 @@ Joyride
 
 Build easy feature tours, thanks to [ZURB's joyride plugin](http://www.zurb.com/playground/jquery-joyride-feature-tour-plugin)
 
+See a live demo [here](http://joyride-rails-demo.herokuapp.com/)
+
 Setup
 ------
 You must include the proper script and style assets
