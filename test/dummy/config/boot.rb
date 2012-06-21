@@ -6,6 +6,7 @@ if File.exist?(gemfile)
   require 'bundler'
   require "haml-rails"
   require "sass-rails"
+  require "bourbon"
   Bundler.setup
 end
 

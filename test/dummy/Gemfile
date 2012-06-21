@@ -3,11 +3,11 @@ source "http://rubygems.org"
 # Declare your gem's dependencies in joyride-rails.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
-gem "rails", "~>3.2.2"
+gem "rails", "~>3.2"
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
-gem "joyride-rails"
+gem "joyride-rails", :path => "../../"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
