@@ -3,3 +3,5 @@ module Joyride
     isolate_namespace Joyride
   end
 end
+
+require 'bourbon'
